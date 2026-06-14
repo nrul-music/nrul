@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRUL Journal | NRUL</title>
-    <meta name="description" content="Thoughts, sound design guides, and updates from the creators of NRUL.">
+    <title>About Us | NRUL</title>
+    <meta name="description" content="Learn more about Aura Resonance.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    
     <!-- No-Flash Theme Script -->
     <script>
         (function() {
@@ -25,11 +27,8 @@
             }
         })();
     </script>
-    <link rel="stylesheet" href="/style.css">
-    
 <script>window.__BASE__ = '';</script>
 </head>
-
 <body class="zenith-theme">
     <!-- Ambient Background Glows -->
     <div class="ambient-glow" id="glow-1"></div>
@@ -44,8 +43,8 @@
         </a>
         <nav class="nav">
             <a href="/index.html" class="nav-link">Releases</a>
-            <a href="/blog.html" class="nav-link active-nav">Journal</a>
-            <a href="/about.html" class="nav-link">About Us</a>
+            <a href="/blog.html" class="nav-link">Journal</a>
+            <a href="/about.html" class="nav-link active-nav">About Us</a>
 
         </nav>
         <div style="display: flex; align-items: center; gap: 16px;">
@@ -74,43 +73,23 @@
     </div>
 
     <!-- Main Content -->
-    <main class="blog-page-container">
-        <div class="blog-header">
-            <h1>NRUL Journal</h1>
-            <p>Thoughts, sound design guides, and updates from the creators of NRUL.</p>
-        </div>
-        
-        <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+    <main>
+        <article class="post-container glass-card">
+            <a href="/index.html" class="back-nav">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Home
+            </a>
             
-                    <article class="blog-card glass-card" onclick="if(window.navigateToPage){window.navigateToPage('/posts/intro-aura-resonance.html');}else{window.location.href='/posts/intro-aura-resonance.html';}">
-                        <div class="blog-card-art">
-                            <img src="/assets/lofi_chill.png" alt="Postingan Pertama Saya Cover">
-                        </div>
-                        <div class="blog-card-body">
-                            <div class="blog-card-meta">
-                                <span class="blog-card-date">2026-06-14</span>
-                                <span class="blog-card-author">By Aura Team</span>
-                            </div>
-                            <h4 class="blog-card-title">Postingan Pertama Saya</h4>
-                            <p class="blog-card-excerpt">Welcome to our new space. Read about how we curating instrumental sounds to improve mental focus.</p>
-                            <span class="blog-card-link">Read Article &rarr;</span>
-                        </div>
-                    </article>
-                    <article class="blog-card glass-card" onclick="if(window.navigateToPage){window.navigateToPage('/posts/science-of-focus-music.html');}else{window.location.href='/posts/science-of-focus-music.html';}">
-                        <div class="blog-card-art">
-                            <img src="/assets/cosmic_ambient.png" alt="The Science of Focus Music Cover">
-                        </div>
-                        <div class="blog-card-body">
-                            <div class="blog-card-meta">
-                                <span class="blog-card-date">2026-06-10</span>
-                                <span class="blog-card-author">By Aura Team</span>
-                            </div>
-                            <h4 class="blog-card-title">The Science of Focus Music</h4>
-                            <p class="blog-card-excerpt">Why does instrumental music boost productivity? Exploring the neurology of soundscapes.</p>
-                            <span class="blog-card-link">Read Article &rarr;</span>
-                        </div>
-                    </article>
-        </div>
+            <div class="post-header">
+                <h1 class="post-title">About Us</h1>
+            </div>
+            
+            
+            
+            <div class="post-content">
+                <p>Welcome to Aura Resonance. We make music for focus.</p>
+            </div>
+        </article>
     </main>
 
     

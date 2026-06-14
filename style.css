@@ -2240,6 +2240,41 @@ html.light-mode .theme-toggle .icon-moon {
     box-shadow: 0 0 10px rgba(252, 60, 68, 0.2);
 }
 
+.header-social-link.dsp-x:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+html.light-mode .header-social-link.dsp-x:hover {
+    color: #000000;
+    border-color: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-social-link.dsp-facebook:hover {
+    color: #1877f2;
+    border-color: rgba(24, 119, 242, 0.3);
+    background: rgba(24, 119, 242, 0.05);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.2);
+}
+
+.header-social-link.dsp-instagram:hover {
+    color: #e4405f;
+    border-color: rgba(228, 64, 95, 0.3);
+    background: rgba(228, 64, 95, 0.05);
+    box-shadow: 0 0 10px rgba(228, 64, 95, 0.2);
+}
+
+.header-social-link.dsp-tiktok:hover {
+    color: #00f2fe;
+    border-color: rgba(0, 242, 254, 0.3);
+    background: rgba(0, 242, 254, 0.05);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2), 0 0 5px rgba(254, 44, 85, 0.2);
+}
+
 html.light-mode .header-social-link {
     background: rgba(0, 0, 0, 0.03);
     border-color: rgba(0, 0, 0, 0.08);

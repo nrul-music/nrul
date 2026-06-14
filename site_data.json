@@ -8,7 +8,18 @@
         "logoText": "NRUL",
         "spotifyLink": "https://open.spotify.com",
         "youtubeLink": "https://youtube.com",
-        "appleLink": "https://music.apple.com"
+        "appleLink": "https://music.apple.com",
+        "showSpotify": true,
+        "showYoutube": true,
+        "showApple": true,
+        "xLink": "https://x.com",
+        "showX": true,
+        "facebookLink": "",
+        "showFacebook": true,
+        "instagramLink": "",
+        "showInstagram": true,
+        "tiktokLink": "https://www.tiktok.com/@liberstaum",
+        "showTiktok": true
     },
     "journal": {
         "title": "NRUL Journal",
@@ -100,6 +111,16 @@
             "excerpt": "Why does instrumental music boost productivity? Exploring the neurology of soundscapes.",
             "content": "<h2>How Sound Shapes Cognitive Flow</h2><p>Why do certain types of music help us study or code while others distract us? The answer lies in how our brain processes audial frequencies.</p><p>When you listen to lyric-heavy music, your language-processing centers (primarily Broca's and Wernicke's areas) actively try to decode the words. This competes with your logical reading and writing focus. Instrumental soundscapes bypass this linguistic layer completely, allowing your working memory to remain focused on the task at hand.</p><p>Furthermore, ambient tracks maintain a steady sound volume and avoid sudden transitions. This prevents the amygdala from getting startled, lowering stress levels and keeping you in a state of flow for hours.</p>",
             "cover": "assets/cosmic_ambient.png"
+        }
+    ],
+    "pages": [
+        {
+            "id": "about",
+            "title": "About Us",
+            "inNavigation": true,
+            "excerpt": "Learn more about Aura Resonance.",
+            "content": "<p>Welcome to Aura Resonance. We make music for focus.</p>",
+            "cover": ""
         }
     ]
 }
