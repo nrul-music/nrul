@@ -8,6 +8,10 @@
         "youtubeLink": "https://youtube.com",
         "appleLink": "https://music.apple.com"
     },
+    "journal": {
+        "title": "Aura Journal",
+        "description": "Thoughts, sound design guides, and updates from the creators of NRUL."
+    },
     "hero": {
         "tagline": "Introducing NRUL Soundscapes",
         "titlePart1": "Soundscapes",
