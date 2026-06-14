@@ -1,0 +1,26 @@
+{
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "collection",
+      "collectionType": "Album",
+      "artistId": 479756766,
+      "collectionId": 1488408555,
+      "amgArtistId": 2377309,
+      "artistName": "The Weeknd",
+      "collectionName": "Blinding Lights - Single",
+      "collectionCensoredName": "Blinding Lights - Single",
+      "artistViewUrl": "https://music.apple.com/us/artist/the-weeknd/479756766?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/blinding-lights-single/1488408555?uo=4",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a6/6e/bf/a66ebf79-5008-8948-b352-a790fc87446b/19UM1IM04638.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a6/6e/bf/a66ebf79-5008-8948-b352-a790fc87446b/19UM1IM04638.rgb.jpg/100x100bb.jpg",
+      "collectionExplicitness": "notExplicit",
+      "trackCount": 1,
+      "copyright": "℗ 2019 The Weeknd XO, Inc., manufactured and marketed by Republic Records, a division of UMG Recordings, Inc.",
+      "country": "USA",
+      "currency": "USD",
+      "releaseDate": "2019-11-29T08:00:00Z",
+      "primaryGenreName": "R&B/Soul"
+    }
+  ]
+}

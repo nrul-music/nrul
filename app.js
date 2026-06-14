@@ -148,6 +148,74 @@ async function initApp() {
     window.addEventListener("resize", resizeCanvas);
 }
 
+// --- Helper: Extract Dominant Colors from Image Element dynamically ---
+function getDominantColorsFromImage(imgElement, callback) {
+    try {
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = 40;
+        canvas.height = 40;
+        ctx.drawImage(imgElement, 0, 0, 40, 40);
+        
+        const imgData = ctx.getImageData(0, 0, 40, 40).data;
+        const colorCounts = {};
+        let rSum = 0, gSum = 0, bSum = 0, count = 0;
+        
+        for (let i = 0; i < imgData.length; i += 4) {
+            const r = imgData[i];
+            const g = imgData[i+1];
+            const b = imgData[i+2];
+            const a = imgData[i+3];
+            
+            if (a < 220) continue; // Skip semi-transparent pixels
+            
+            // Skip extremely dark/bright pixels for better vibrance
+            const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+            if (brightness < 40 || brightness > 220) continue;
+            
+            rSum += r;
+            gSum += g;
+            bSum += b;
+            count++;
+            
+            // Quantize to group similar colors
+            const qR = Math.round(r / 20) * 20;
+            const qG = Math.round(g / 20) * 20;
+            const qB = Math.round(b / 20) * 20;
+            const key = `${qR},${qG},${qB}`;
+            colorCounts[key] = (colorCounts[key] || 0) + 1;
+        }
+        
+        let dominantColor = "rgb(138, 43, 226)";
+        let secondaryColor = "rgb(255, 0, 127)";
+        
+        if (count > 0) {
+            const sortedColors = Object.keys(colorCounts).sort((a, b) => colorCounts[b] - colorCounts[a]);
+            if (sortedColors.length > 0) {
+                const parts1 = sortedColors[0].split(',').map(Number);
+                dominantColor = `rgb(${parts1[0]}, ${parts1[1]}, ${parts1[2]})`;
+                
+                if (sortedColors.length > 1) {
+                    const parts2 = sortedColors[1].split(',').map(Number);
+                    const diff = Math.abs(parts1[0] - parts2[0]) + Math.abs(parts1[1] - parts2[1]) + Math.abs(parts1[2] - parts2[2]);
+                    if (diff > 80) {
+                        secondaryColor = `rgb(${parts2[0]}, ${parts2[1]}, ${parts2[2]})`;
+                    } else {
+                        // Hue shift for complementary gradient
+                        secondaryColor = `rgb(${(parts1[0] + 100) % 256}, ${(parts1[1] + 50) % 256}, ${(parts1[2] + 150) % 256})`;
+                    }
+                } else {
+                    secondaryColor = `rgb(${(parts1[0] + 100) % 256}, ${(parts1[1] + 50) % 256}, ${(parts1[2] + 150) % 256})`;
+                }
+            }
+        }
+        callback(dominantColor, secondaryColor);
+    } catch (e) {
+        console.warn("Failed to extract dominant colors: ", e);
+        callback("rgb(138, 43, 226)", "rgb(255, 0, 127)");
+    }
+}
+
 function loadTrack(index) {
     const tracks = getTracks();
     if (!tracks || tracks.length === 0) return;
@@ -158,11 +226,25 @@ function loadTrack(index) {
     updateSlides();
     
     // Update Audio Element
-    audio.src = getAbsolutePath(track.url);
+    const initialSongUrl = (track.songs && track.songs.length > 0 && track.songs[0].url && track.songs[0].url.trim() !== '') ? track.songs[0].url : track.url;
+    audio.src = getAbsolutePath(initialSongUrl);
     audio.load();
     
     // Update Player UI if elements exist
-    if (playerCover) playerCover.src = getAbsolutePath(track.cover);
+    if (playerCover) {
+        playerCover.onload = () => {
+            getDominantColorsFromImage(playerCover, (accent1, accent2) => {
+                const toRgba = (rgbStr, alpha) => {
+                    return rgbStr.replace("rgb", "rgba").replace(")", `, ${alpha})`);
+                };
+                document.documentElement.style.setProperty("--accent-1", accent1);
+                document.documentElement.style.setProperty("--accent-2", accent2);
+                document.documentElement.style.setProperty("--accent-glow-1", toRgba(accent1, 0.15));
+                document.documentElement.style.setProperty("--accent-glow-2", toRgba(accent2, 0.15));
+            });
+        };
+        playerCover.src = getAbsolutePath(track.cover);
+    }
     if (playerTitle) playerTitle.textContent = track.title;
     if (playerArtist) playerArtist.textContent = track.artist;
     if (playerGenreBadge) {

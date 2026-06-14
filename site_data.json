@@ -194,17 +194,46 @@
             }
         },
         {
-            "title": "Losing to Nothing",
-            "artist": "NRUL",
-            "url": "https://p.scdn.co/mp3-preview/105b73a8a2cdf7a8e281c7ddd2035a4341d12a59",
-            "cover": "assets/cover_1781437771486_kalahdariyangtiada.jpg",
-            "genre": "POP",
-            "badgeClass": "badge-lofi",
-            "category": "Single",
-            "releaseDate": "2026-05-23",
-            "songs": [],
-            "spotify": "",
-            "youtube": "",
+            "title": "Devagarzinho",
+            "artist": "e6tenx!on",
+            "url": "assets/preview_1781451795477_fno93.mp3",
+            "cover": "assets/cover_1781451773137.jpg",
+            "genre": "ELECTRONICA",
+            "badgeClass": "badge-synth",
+            "category": "EP",
+            "releaseDate": "2026-06-04",
+            "songs": [
+                {
+                    "title": "Devagarzinho",
+                    "artist": "e6tenx!on",
+                    "url": "assets/preview_1781451795477_fno93.mp3",
+                    "trimStart": "00:32",
+                    "trimEnd": "01:23"
+                },
+                {
+                    "title": "Devagarzinho - Sped Up",
+                    "artist": "e6tenx!on",
+                    "url": "assets/preview_1781451869665_lmkpk.mp3",
+                    "trimStart": "00:30",
+                    "trimEnd": "01:30"
+                },
+                {
+                    "title": "Devagarzinho - Slowed",
+                    "artist": "e6tenx!on",
+                    "url": "assets/preview_1781451873170_gmkn9.mp3",
+                    "trimStart": "00:30",
+                    "trimEnd": "01:30"
+                },
+                {
+                    "title": "Devagarzinho - Super Slowed",
+                    "artist": "e6tenx!on",
+                    "url": "assets/preview_1781451874056_hvb0n.mp3",
+                    "trimStart": "00:30",
+                    "trimEnd": "01:30"
+                }
+            ],
+            "spotify": "https://open.spotify.com/album/3LCikljYPgfiL4srQtibEN",
+            "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kJaO6BVGY9E7QuqzRwuMZzbfMnafZkSBQ",
             "apple": "",
             "theme": {
                 "accent1": "#8a2be2",

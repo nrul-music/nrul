@@ -1,0 +1,755 @@
+{
+  "props": {
+    "pageProps": {
+      "state": {
+        "data": {
+          "entity": {
+            "type": "album",
+            "name": "Goodbye Yellow Brick Road (Remastered / Deluxe Edition)",
+            "uri": "spotify:album:6g9uPPHtnxQLSUd6d9xK8n",
+            "id": "6g9uPPHtnxQLSUd6d9xK8n",
+            "title": "Goodbye Yellow Brick Road (Remastered / Deluxe Edition)",
+            "subtitle": "Elton John",
+            "isPreRelease": false,
+            "releaseDate": null,
+            "duration": 0,
+            "isPlayable": true,
+            "playabilityReason": "PLAYABLE",
+            "isExplicit": false,
+            "hasVideo": false,
+            "relatedEntityUri": "spotify:album:6g9uPPHtnxQLSUd6d9xK8n",
+            "trackList": [
+              {
+                "uri": "spotify:track:3JNgpaqUdpozbCnbPOMqPQ",
+                "uid": "6b7f574c7e767418a0c3",
+                "title": "Funeral For A Friend / Love Lies Bleeding - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 666571,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/ee10103342ee166ebf87921ac698a675658b166b"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5khtjkzX0pzH1cjDgM6K6H",
+                "uid": "f2e30a94e6f0e75cdcc6",
+                "title": "Candle In The Wind - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 228932,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/c6b70f7e5f1e45efb9f4d677cb8ba3c041caa39a"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:0dBatXn1vVUl0jLgXRClwD",
+                "uid": "3185941c3c381f9c7185",
+                "title": "Bennie And The Jets - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 322548,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/cc3be345afbbebbaf1e785916bd8755adfb4bf99"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:6Rvlwah55rEmg1ufhBz022",
+                "uid": "38a7fd5b2bdb895ce70f",
+                "title": "Goodbye Yellow Brick Road - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 192826,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/2bbb66b8e6b0ffc9d5b0d6be802fabf4053c8a33"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:7exP9YAJn9eYqCp9YB5WpD",
+                "uid": "8258ed3cdc55e08116fa",
+                "title": "This Song Has No Title - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 143394,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/9b387ceb1afe764e838ba17c477237d23ee3598b"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:1O59cFKhVDYjNaPhCrgWT6",
+                "uid": "b920c40e9ff6b4a3bc7c",
+                "title": "Grey Seal - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 240126,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/3f282f60e0d063ff2b684eef271bd0b8959350f2"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5dvGbMSVrQdf5Yjpw1afww",
+                "uid": "458035ebcc31a1f1d3ba",
+                "title": "Jamaica Jerk-Off - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 218341,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/ff87f11219a8ffd8753c4d10bcb853453751a106"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5yCo1LqUaYkSq28509G2Be",
+                "uid": "9224a9d349ab8344ba0d",
+                "title": "I've Seen That Movie Too - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 357658,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/7e41d44b60cee8347f29ade1c4b0e440bef5673f"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5ZMyJoZiCZeg7MxRoGl1yu",
+                "uid": "ac7d73c4c5e98390c256",
+                "title": "Sweet Painted Lady - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 234053,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/012aa6b6571bebb76347deb1ea0b751ac5f454b5"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:7asbXXEBjE7yHltLKLUKao",
+                "uid": "efbe4a2642160dd827dd",
+                "title": "The Ballad Of Danny Bailey (1909-1934) - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 263279,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/d8aa4d67e29429d953d63aa83bd2f23f4fa061b7"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:6BWIwsxvs7QicvmK0DdSux",
+                "uid": "7ba7b26d5d903fc9d1ce",
+                "title": "Dirty Little Girl - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 300353,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/80d24817080c8b69dfee026198ae0e6c4222dbbe"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:3CBW9DKwd4LbqsiEONhne7",
+                "uid": "d31c1e15cb89171479b1",
+                "title": "All The Girls Love Alice - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 308353,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/d6a74e74bd066d7fe31564dbaf7fc563af152a8a"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:2j27XNwrhqDmUdmduYtp21",
+                "uid": "c0f9675531125a03601e",
+                "title": "Your Sister Can't Twist (But She Can Rock'n' Roll) - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 161640,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/68a04d85d2ed76e503a4ccad7a1e0ade265ff712"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:0LHItNoPqjxWcbvQzw9NIv",
+                "uid": "5775f23f5d57e94ad0af",
+                "title": "Saturday Night’s Alright (For Fighting) - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 295466,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/b8a6d629145b07df5a30874cee5b608a1849cade"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:6l7ZrfDzuHodT5XfcMmBiX",
+                "uid": "82dad7cea207ff61b6f7",
+                "title": "Roy Rogers - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 247413,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/eb942d289d377a8cd9954bc298bd6f16e56e815b"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:31kvlu3mbKqP1faIyE3CIr",
+                "uid": "b9f44e2360c3f70829fc",
+                "title": "Social Disease - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 222706,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/89c222e398c4a97789125a6dc84ba16fb57d4994"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:6sCesp5DUtzzxpjJpy8slx",
+                "uid": "04a8938cc759323a2540",
+                "title": "Harmony - Remastered 2014",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 164872,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/a8ae401496b15f03d95069b54190974ea52e72f6"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:7fWnNOPLIsqo1lYeWHsOE3",
+                "uid": "2c4a41162117ee1bc611",
+                "title": "Bennie And The Jets",
+                "subtitle": "Miguel, Wale",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 310066,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/474e64a378085a17a646a29584438ebe75543b5e"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:4IjUJOTVhLGNXt5ortPfK1",
+                "uid": "cd1e69914d3a942f54ab",
+                "title": "Goodbye Yellow Brick Road",
+                "subtitle": "Hunter Hayes",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 188600,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/fccd20031e0caf55bf9e787d12329a513164a51a"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:1VEXoZDCog19glP33CLV5N",
+                "uid": "3f41ade75352af1ea91c",
+                "title": "Grey Seal",
+                "subtitle": "The Band Perry",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 218493,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/483457ae0fd5d0c6ee555d1e57dcdbe92ef57e52"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:6US4B5GBi7mWJYwpzJTNE8",
+                "uid": "8f8e612d5220c5570e54",
+                "title": "Sweet Painted Lady",
+                "subtitle": "John Grant",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 236512,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/80269b403a67b6e23d6f6809deda9b568e5a150f"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:0eTz7ulBtg1PKqm8QWzYMD",
+                "uid": "88999cb3cc3723081516",
+                "title": "All The Girls Love Alice",
+                "subtitle": "Emeli Sandé",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 214901,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/fd20fa37ab8f18c723a480dbd77fda37da7d81b7"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5wWOVL8PEzTzlmqZzHIWF5",
+                "uid": "75fa49fa28f1a5074ec7",
+                "title": "Your Sister Can't Twist (But She Can Rock 'n' Roll)",
+                "subtitle": "Imelda May",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 169693,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/de5086d1bdf9fdb311bcb3d665e1682d71fb62cb"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:1DNBNlWpxxvcvgM9soF7hC",
+                "uid": "8f080b5fceeeb9628bed",
+                "title": "Saturday Night's Alright (For Fighting)",
+                "subtitle": "Fall Out Boy",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 224306,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/cb512d59604c701725c02d6ff3b92cbb84e35d7d"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:44FCyiVMOSW6cJWpctVgw8",
+                "uid": "d235a237bbcbd2ef7ef9",
+                "title": "Harmony",
+                "subtitle": "Zac Brown Band",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 177037,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/af443c902062825eea089251ed69674c57a21bf8"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:4AbW7QK9UH5AXVajrv332F",
+                "uid": "1d16ded70540a6d9fb06",
+                "title": "Candle In The Wind - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 244281,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:32yJXT2IMWrn2WhEe9it3c",
+                "uid": "a8d50148a7edc96f94a4",
+                "title": "Goodbye Yellow Brick Road - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 187253,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5kGM13x9DVzQBgWOKKMBBz",
+                "uid": "52af71a2fdb28772ab69",
+                "title": "All The Girls Love Alice - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 438359,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:3ffAHZ1UY899F46Firbt4k",
+                "uid": "cf2e3bbfb4da1db92bfa",
+                "title": "Bennie And The Jets - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 368625,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:1pdyvQZdwiXPcsoVWeHkF3",
+                "uid": "e3805ecefc5355b8e9a4",
+                "title": "Rocket Man - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 295080,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/a6382fb78da9a10f94f85d31d8c2192b1c6dc027"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:2OoPtwAwev772E4njGGnC4",
+                "uid": "d2c128d5e2e4a56bbf7f",
+                "title": "Daniel - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 256626,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/e47fbf8184c21b0accbded916c139bbdb9fbfa58"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:5Uz9pMcUDwerrcUq1FaHbk",
+                "uid": "3970175373ab557dd7e3",
+                "title": "Honky Cat - Live At Hammersmith Odeon / 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 435742,
+                "isPlayable": true,
+                "playabilityReason": "PLAYABLE",
+                "audioPreview": {
+                  "format": "MP3_96",
+                  "url": "https://p.scdn.co/mp3-preview/65f6be43fc0a439805f4b468176bdbe37722e030"
+                },
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:7hXWSoyuvRzE7fEs6c3rV0",
+                "uid": "e5141014720c9208eb55",
+                "title": "Crocodile Rock - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 235804,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              },
+              {
+                "uri": "spotify:track:41wYZBe83sNMK4HiYmXtPo",
+                "uid": "5c62468fb7c72e28f681",
+                "title": "Your Song - Live At Hammersmith Odeon, London/ 1973",
+                "subtitle": "Elton John",
+                "isExplicit": false,
+                "isNineteenPlus": false,
+                "contentRatings": {
+                  "labels": []
+                },
+                "duration": 248840,
+                "isPlayable": false,
+                "playabilityReason": "COUNTRY_RESTRICTED",
+                "audioPreview": null,
+                "entityType": "track"
+              }
+            ],
+            "visualIdentity": {
+              "backgroundBase": {
+                "alpha": 255,
+                "blue": 36,
+                "green": 91,
+                "red": 60
+              },
+              "backgroundTintedBase": {
+                "alpha": 255,
+                "blue": 0,
+                "green": 57,
+                "red": 28
+              },
+              "textBase": {
+                "alpha": 255,
+                "blue": 255,
+                "green": 255,
+                "red": 255
+              },
+              "textBrightAccent": {
+                "alpha": 255,
+                "blue": 255,
+                "green": 255,
+                "red": 255
+              },
+              "textSubdued": {
+                "alpha": 255,
+                "blue": 164,
+                "green": 214,
+                "red": 184
+              },
+              "image": [
+                {
+                  "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02f5b95dce2bc9db5ed3f8028f",
+                  "maxHeight": 300,
+                  "maxWidth": 300
+                },
+                {
+                  "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00004851f5b95dce2bc9db5ed3f8028f",
+                  "maxHeight": 64,
+                  "maxWidth": 64
+                },
+                {
+                  "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b273f5b95dce2bc9db5ed3f8028f",
+                  "maxHeight": 640,
+                  "maxWidth": 640
+                }
+              ]
+            }
+          },
+          "embeded_entity_uri": "spotify:album:6g9uPPHtnxQLSUd6d9xK8n",
+          "defaultAudioFileObject": {
+            "passthrough": "NONE"
+          }
+        },
+        "settings": {
+          "rtl": false,
+          "session": {
+            "accessToken": "BQBHhC946kjxYm_vDlVJhWnVvS7uePjAA-FiJ6WoMVlj0N1nIoxqB_KuloOm1RDZyCunhar6KmFu3E-PqlLaEjmf3kB5SbYtuVbs-J7bMXtfS3aoq4RWnqgygAyVKXe5h-RyCYUtD8Mz",
+            "accessTokenExpirationTimestampMs": 1781449204906,
+            "isAnonymous": true
+          },
+          "entityContext": "album",
+          "clientId": "ab9ad0d96a624805a7d51e8868df1f97",
+          "isMobile": false,
+          "isSafari": false,
+          "isIOS": false,
+          "isTablet": false,
+          "isDarkMode": false
+        },
+        "machineState": {
+          "initialized": false,
+          "showOverflowMenu": false,
+          "playbackMode": "unknown",
+          "currentPreviewTrackIndex": 0,
+          "platformSupportsEncryptedContent": false
+        }
+      },
+      "config": {
+        "correlationId": "e11dd03d6fd5d0e6ef88d5fdefd36603",
+        "strings": {
+          "en": {
+            "translation": {}
+          }
+        },
+        "locale": "en",
+        "clientId": "ab9ad0d96a624805a7d51e8868df1f97",
+        "restrictionId": ""
+      },
+      "_sentryTraceData": "aec0120ff26ed27817a77296215a2b89-24b0ae10ee076735-0",
+      "_sentryBaggage": "sentry-environment=production,sentry-release=c84433002701f01ffd58a1942b837809dbaa78dd,sentry-public_key=4cc707ab12ea4779b417479c0550a5cb,sentry-trace_id=aec0120ff26ed27817a77296215a2b89,sentry-org_id=22381,sentry-sampled=false,sentry-sample_rand=0.01916458555702172,sentry-sample_rate=0"
+    },
+    "__N_SSP": true
+  },
+  "page": "/album/[id]",
+  "query": {
+    "id": "6g9uPPHtnxQLSUd6d9xK8n"
+  },
+  "buildId": "04137497-8dac-45b7-bffa-e090ab0b3b7c",
+  "assetPrefix": "https://embed-cdn.spotifycdn.com",
+  "isFallback": false,
+  "isExperimentalCompile": false,
+  "gssp": true,
+  "scriptLoader": []
+}
