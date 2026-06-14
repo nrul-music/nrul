@@ -1,7 +1,7 @@
 {
     "selectedTheme": "zenith",
     "defaultThemeMode": "light",
-    "baseUrl": "/nrul",
+    "baseUrl": "",
     "branding": {
         "logoText": "NRUL",
         "spotifyLink": "https://open.spotify.com",
