@@ -1539,9 +1539,16 @@ html.light-mode .slider-dot.active-dot {
     font-weight: 500;
 }
 
-.song-item-artist {
-    font-size: 0.8rem;
-    opacity: 0.8;
+.song-play-indicator {
+    display: none;
+    align-items: center;
+    color: var(--accent-1);
+    opacity: 0.9;
+    transition: color var(--transition-fast);
+}
+
+.song-item-active .song-play-indicator {
+    display: inline-flex;
 }
 
 /* Light Mode Overrides for Song Items */

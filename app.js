@@ -277,7 +277,7 @@ function loadTrack(index) {
                 songItem.style.cursor = "pointer";
                 songItem.innerHTML = `
                     <span><span class="song-item-number">${String(idx + 1).padStart(2, '0')}</span><span class="song-item-title">${song.title}</span></span>
-                    <span class="song-item-artist">${song.artist}</span>
+                    <span class="song-play-indicator"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
                 `;
                 playerSongList.appendChild(songItem);
             });
@@ -988,7 +988,7 @@ function rebindPageScripts() {
                     songItem.style.cursor = "pointer";
                     songItem.innerHTML = `
                         <span><span class="song-item-number">${String(idx + 1).padStart(2, '0')}</span><span class="song-item-title">${song.title}</span></span>
-                        <span class="song-item-artist">${song.artist}</span>
+                        <span class="song-play-indicator"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
                     `;
                     playerSongList.appendChild(songItem);
                 });

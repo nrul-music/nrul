@@ -55,185 +55,26 @@
     },
     "tracks": [
         {
-            "title": "Silent Whispers",
-            "artist": "Lofi & Chillout Vibe",
-            "url": "assets/silent_whispers.mp3",
-            "cover": "assets/lofi_chill.png",
+            "title": "Kalah Dari Yang Tiada",
+            "artist": "NRUL",
+            "url": "assets/preview_1781474922562_k7r9n.mp3",
+            "cover": "assets/cover_1781474906801.jpg",
             "genre": "LO-FI",
             "badgeClass": "badge-lofi",
-            "category": "EP",
-            "releaseDate": "2026-06-14",
-            "songs": [
-                {
-                    "title": "Silent Whispers",
-                    "artist": "Lofi Chill",
-                    "url": "assets/silent_whispers.mp3"
-                },
-                {
-                    "title": "Coffee Morning",
-                    "artist": "Lofi Chill",
-                    "url": ""
-                },
-                {
-                    "title": "Dreamy Keys",
-                    "artist": "Lofi Chill",
-                    "url": ""
-                }
-            ],
-            "spotify": "https://open.spotify.com",
-            "youtube": "https://youtube.com",
-            "apple": "https://music.apple.com",
-            "theme": {
-                "accent1": "#00f0ff",
-                "accent2": "#7000ff",
-                "glow1": "rgba(0, 240, 255, 0.15)",
-                "glow2": "rgba(112, 0, 255, 0.15)"
-            }
-        },
-        {
-            "title": "Neon Pulse",
-            "artist": "Synthwave / Retrowave Drive",
-            "url": "assets/neon_pulse.mp3",
-            "cover": "assets/neon_sunset.png",
-            "genre": "SYNTHWAVE",
-            "badgeClass": "badge-synth",
             "category": "Single",
-            "releaseDate": "2026-06-08",
+            "releaseDate": "2026-05-23",
             "songs": [
                 {
-                    "title": "Neon Pulse",
-                    "artist": "Synthwave",
-                    "url": "assets/neon_pulse.mp3"
+                    "title": "Kalah Dari Yang Tiada",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1781474922562_k7r9n.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=en6iY7oEKAY",
+                    "trimStart": "00:00",
+                    "trimEnd": "01:00"
                 }
             ],
-            "spotify": "https://open.spotify.com",
-            "youtube": "https://youtube.com",
-            "apple": "https://music.apple.com",
-            "theme": {
-                "accent1": "#ff007f",
-                "accent2": "#00f0ff",
-                "glow1": "rgba(255, 0, 127, 0.15)",
-                "glow2": "rgba(0, 240, 255, 0.15)"
-            }
-        },
-        {
-            "title": "Ethereal Drift",
-            "artist": "Cosmic Ambient & Pads",
-            "url": "assets/ethereal_drift.mp3",
-            "cover": "assets/cosmic_ambient.png",
-            "genre": "AMBIENT",
-            "badgeClass": "badge-ambient",
-            "category": "Album",
-            "releaseDate": "2026-05-20",
-            "songs": [
-                {
-                    "title": "Starship Voyage",
-                    "artist": "Cosmic Ambient",
-                    "url": "assets/ethereal_drift.mp3"
-                },
-                {
-                    "title": "Nebulae Nebula",
-                    "artist": "Cosmic Ambient",
-                    "url": ""
-                },
-                {
-                    "title": "Ethereal Drift",
-                    "artist": "Cosmic Ambient",
-                    "url": ""
-                },
-                {
-                    "title": "Space Wind",
-                    "artist": "Cosmic Ambient",
-                    "url": ""
-                }
-            ],
-            "spotify": "https://open.spotify.com",
-            "youtube": "https://youtube.com",
-            "apple": "https://music.apple.com",
-            "theme": {
-                "accent1": "#00f0ff",
-                "accent2": "#7000ff",
-                "glow1": "rgba(0, 240, 255, 0.15)",
-                "glow2": "rgba(112, 0, 255, 0.15)"
-            }
-        },
-        {
-            "title": "Acoustic Path",
-            "artist": "Warm Instrumental Folk Guitar",
-            "url": "assets/acoustic_path.mp3",
-            "cover": "assets/acoustic_dreams.png",
-            "genre": "ACOUSTIC",
-            "badgeClass": "badge-acoustic",
-            "category": "EP",
-            "releaseDate": "2026-04-12",
-            "songs": [
-                {
-                    "title": "Acoustic Path",
-                    "artist": "Folk Guitar",
-                    "url": "assets/acoustic_path.mp3"
-                },
-                {
-                    "title": "River Flow",
-                    "artist": "Folk Guitar",
-                    "url": ""
-                },
-                {
-                    "title": "Forest Trail",
-                    "artist": "Folk Guitar",
-                    "url": ""
-                }
-            ],
-            "spotify": "https://open.spotify.com",
-            "youtube": "https://youtube.com",
-            "apple": "https://music.apple.com",
-            "theme": {
-                "accent1": "#ffaa00",
-                "accent2": "#22c55e",
-                "glow1": "rgba(255, 170, 0, 0.15)",
-                "glow2": "rgba(34, 197, 94, 0.15)"
-            }
-        },
-        {
-            "title": "Devagarzinho",
-            "artist": "e6tenx!on",
-            "url": "assets/preview_1781451795477_fno93.mp3",
-            "cover": "assets/cover_1781451773137.jpg",
-            "genre": "ELECTRONICA",
-            "badgeClass": "badge-synth",
-            "category": "EP",
-            "releaseDate": "2026-06-04",
-            "songs": [
-                {
-                    "title": "Devagarzinho",
-                    "artist": "e6tenx!on",
-                    "url": "assets/preview_1781451795477_fno93.mp3",
-                    "trimStart": "00:32",
-                    "trimEnd": "01:23"
-                },
-                {
-                    "title": "Devagarzinho - Sped Up",
-                    "artist": "e6tenx!on",
-                    "url": "assets/preview_1781451869665_lmkpk.mp3",
-                    "trimStart": "00:30",
-                    "trimEnd": "01:30"
-                },
-                {
-                    "title": "Devagarzinho - Slowed",
-                    "artist": "e6tenx!on",
-                    "url": "assets/preview_1781451873170_gmkn9.mp3",
-                    "trimStart": "00:30",
-                    "trimEnd": "01:30"
-                },
-                {
-                    "title": "Devagarzinho - Super Slowed",
-                    "artist": "e6tenx!on",
-                    "url": "assets/preview_1781451874056_hvb0n.mp3",
-                    "trimStart": "00:30",
-                    "trimEnd": "01:30"
-                }
-            ],
-            "spotify": "https://open.spotify.com/album/3LCikljYPgfiL4srQtibEN",
-            "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kJaO6BVGY9E7QuqzRwuMZzbfMnafZkSBQ",
+            "spotify": "https://open.spotify.com/album/0W6jOgUNWF7nbXW4MR6q8o",
+            "youtube": "https://music.youtube.com/watch?v=en6iY7oEKAY",
             "apple": "",
             "theme": {
                 "accent1": "#8a2be2",
