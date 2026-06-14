@@ -18,7 +18,7 @@
     <script>
         (function() {
             const savedMode = localStorage.getItem('themeMode');
-            const defaultMode = 'light';
+            const defaultMode = 'dark';
             const activeMode = savedMode || defaultMode || 'dark';
             if (activeMode === 'light') {
                 document.documentElement.classList.add('light-mode');
