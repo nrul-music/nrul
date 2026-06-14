@@ -2367,6 +2367,49 @@ html.light-mode .header-social-link {
     color: var(--color-text-main);
 }
 
+/* --- Quill Rich Formatting & Alignment support inside posts --- */
+.post-content .ql-align-center {
+    text-align: center;
+}
+
+.post-content .ql-align-right {
+    text-align: right;
+}
+
+.post-content .ql-align-justify {
+    text-align: justify;
+}
+
+.post-content .ql-size-small {
+    font-size: 0.85em;
+}
+
+.post-content .ql-size-large {
+    font-size: 1.35em;
+}
+
+.post-content .ql-size-huge {
+    font-size: 1.8em;
+}
+
+.post-content .ql-font-serif {
+    font-family: Georgia, serif;
+}
+
+.post-content .ql-font-monospace {
+    font-family: Monaco, monospace;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--glass-border);
+    margin: 24px auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
 .back-nav {
     display: inline-flex;
     align-items: center;
