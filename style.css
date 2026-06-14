@@ -2493,3 +2493,29 @@ html.light-mode .header-social-link {
         font-size: 2.4rem;
     }
 }
+
+/* --- Quill List Formatting Fix (Quill 2.0 uses ol for bullets) --- */
+.ql-editor ol li[data-list="bullet"],
+.post-content ol li[data-list="bullet"] {
+    list-style-type: none !important;
+}
+
+.ql-editor ol li[data-list="bullet"]::before {
+    content: "\2022" !important;
+    color: var(--accent-1);
+}
+
+.post-content ol li[data-list="bullet"] {
+    position: relative;
+    padding-left: 8px;
+}
+
+.post-content ol li[data-list="bullet"]::before {
+    content: "\2022" !important;
+    position: absolute;
+    left: -12px;
+    color: var(--accent-1);
+    font-weight: bold;
+    font-size: 1.1em;
+    top: -1px;
+}
