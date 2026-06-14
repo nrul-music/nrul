@@ -88,12 +88,21 @@ function queryPlayerElements() {
 }
 
 // Helpers for absolute path resolution
+const __BASE__ = (window.__BASE__ || '').replace(/\/$/, '');
+
 function getAbsolutePath(path) {
     if (!path) return '';
-    if (path.startsWith('http') || path.startsWith('/')) {
-        return path;
+    if (path.startsWith('http') || path.startsWith('//')) {
+        return path; // external URL, leave as-is
     }
-    return '/' + path;
+    // Already includes baseUrl prefix
+    if (__BASE__ && path.startsWith(__BASE__)) return path;
+    // Absolute path starting with /
+    if (path.startsWith('/')) {
+        return __BASE__ + path;
+    }
+    // Relative path (e.g. "assets/song.mp3")
+    return __BASE__ + '/' + path;
 }
 
 // Tracks list resolver (fallback to fetching site_data.json if undefined)
@@ -107,7 +116,7 @@ function getTracks() {
 async function ensureTrackList() {
     if (!window.trackList && (typeof trackList === 'undefined' || !trackList)) {
         try {
-            const response = await fetch('/site_data.json');
+            const response = await fetch(__BASE__ + '/site_data.json');
             const data = await response.json();
             window.trackList = data.tracks || [];
         } catch (e) {
@@ -775,7 +784,10 @@ function updateNavigationLinks() {
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href) {
-            const isHome = currentPath === '/' || currentPath.endsWith('index.html');
+            const isHome = currentPath === '/' || 
+                           currentPath.endsWith('index.html') || 
+                           currentPath === __BASE__ || 
+                           currentPath === __BASE__ + '/';
             const isBlog = currentPath.endsWith('blog.html') || currentPath.includes('/posts/');
             
             if (href.includes('index.html') && isHome) {

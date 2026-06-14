@@ -37,6 +37,7 @@ function saveAndCompile() {
     // Collect General settings values
     siteData.selectedTheme = document.getElementById('site-theme-selector').value;
     siteData.defaultThemeMode = document.getElementById('default-theme-mode').value;
+    siteData.baseUrl = document.getElementById('base-url').value.trim();
     siteData.branding.logoText = document.getElementById('logo-text').value;
     siteData.branding.spotifyLink = document.getElementById('spotify-link').value;
     siteData.branding.youtubeLink = document.getElementById('youtube-link').value;
@@ -116,6 +117,7 @@ function setupNavigation() {
 function populateGeneralSettings() {
     document.getElementById('site-theme-selector').value = siteData.selectedTheme || 'resonance';
     document.getElementById('default-theme-mode').value = siteData.defaultThemeMode || 'dark';
+    document.getElementById('base-url').value = siteData.baseUrl || '';
     document.getElementById('logo-text').value = siteData.branding.logoText || '';
     document.getElementById('spotify-link').value = siteData.branding.spotifyLink || '';
     document.getElementById('youtube-link').value = siteData.branding.youtubeLink || '';

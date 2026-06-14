@@ -63,6 +63,23 @@ function compileSite() {
         const activeTheme = data.selectedTheme || 'resonance';
         const defaultThemeMode = data.defaultThemeMode || 'dark';
         
+        // Base URL for GitHub Pages subdirectory deployment (e.g. "/nrul")
+        // Leave empty "" for root-domain deployment (e.g. user.github.io as root)
+        const baseUrl = (data.baseUrl || '').replace(/\/$/, ''); // strip trailing slash
+        
+        // Helper: rewrite all root-relative paths in compiled HTML to use baseUrl
+        function rewritePaths(html) {
+            if (!baseUrl) return html; // no rewrite needed for root deployment
+            // Rewrite href="/" src="/" action="/" patterns — but NOT external URLs (http/https/mailto/# etc)
+            return html
+                .replace(/(\s(?:href|src|action)=")\/(?!\/)/g, `$1${baseUrl}/`)
+                .replace(/(window\.navigateToPage\(['"`])\/(?!\/)/g, `$1${baseUrl}/`)
+                .replace(/(window\.location\.href=['"`])\/(?!\/)/g, `$1${baseUrl}/`)
+                .replace(/(['"`])\/posts\//g, `$1${baseUrl}/posts/`)
+                .replace(/(['"`])\/assets\//g, `$1${baseUrl}/assets/`)
+                .replace(/(['"`])\/site_data\.json(['"`])/g, `$1${baseUrl}/site_data.json$2`);
+        }
+        
         const bodyClass = activeTheme === 'zenith' ? 'zenith-theme' : '';
         let navLinks = '';
         let footerMarkup = '';
@@ -266,6 +283,13 @@ function compileSite() {
         // Inject Tracks JSON inside script
         indexHtml = indexHtml.replace('<!-- TRACKS_JSON_PLACEHOLDER -->', JSON.stringify(data.tracks));
         
+        // Inject base URL so app.js can use it for audio/PJAX paths
+        const baseScript = `<script>window.__BASE__ = '${baseUrl}';</script>`;
+        indexHtml = indexHtml.replace('</head>', baseScript + '\n</head>');
+        
+        // Rewrite all root-relative paths to include baseUrl
+        indexHtml = rewritePaths(indexHtml);
+        
         // Write compiled file
         fs.writeFileSync(path.join(PUBLIC_DIR, 'index.html'), indexHtml, 'utf8');
         
@@ -293,6 +317,11 @@ function compileSite() {
             blogHtml = blogHtml.replace(/{{defaultBadgeClass}}/g, defaultTrack.badgeClass);
             blogHtml = blogHtml.replace(/{{defaultCategory}}/g, defaultTrack.category || 'Single');
             blogHtml = blogHtml.replace('<!-- DEFAULT_SONGS_PLACEHOLDER -->', defaultSongsHtml);
+            
+            // Inject base URL
+            const baseBlogScript = `<script>window.__BASE__ = '${baseUrl}';</script>`;
+            blogHtml = blogHtml.replace('</head>', baseBlogScript + '\n</head>');
+            blogHtml = rewritePaths(blogHtml);
             
             fs.writeFileSync(path.join(PUBLIC_DIR, 'blog.html'), blogHtml, 'utf8');
         }
@@ -333,11 +362,17 @@ function compileSite() {
                 
                 compiledPost = compiledPost.replace(/{{postTitle}}/g, post.title);
                 compiledPost = compiledPost.replace(/{{postDate}}/g, post.date);
-                // Fix: strip leading slash from postCover since template already has /
-                const postCoverPath = post.cover.startsWith('/') ? post.cover.slice(1) : post.cover;
+                // Fix cover path: strip leading slash, then prepend baseUrl for correct asset path
+                const rawCover = post.cover.startsWith('/') ? post.cover.slice(1) : post.cover;
+                const postCoverPath = baseUrl ? `${baseUrl}/${rawCover}` : `/${rawCover}`;
                 compiledPost = compiledPost.replace(/{{postCover}}/g, postCoverPath);
                 compiledPost = compiledPost.replace(/{{postExcerpt}}/g, post.excerpt);
                 compiledPost = compiledPost.replace(/{{postContent}}/g, post.content);
+                
+                // Inject base URL
+                const basePostScript = `<script>window.__BASE__ = '${baseUrl}';</script>`;
+                compiledPost = compiledPost.replace('</head>', basePostScript + '\n</head>');
+                compiledPost = rewritePaths(compiledPost);
                 
                 fs.writeFileSync(path.join(postsDir, `${post.id}.html`), compiledPost, 'utf8');
             });
