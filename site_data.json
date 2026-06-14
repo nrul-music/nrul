@@ -192,6 +192,26 @@
                 "glow1": "rgba(255, 170, 0, 0.15)",
                 "glow2": "rgba(34, 197, 94, 0.15)"
             }
+        },
+        {
+            "title": "Losing to Nothing",
+            "artist": "NRUL",
+            "url": "https://p.scdn.co/mp3-preview/105b73a8a2cdf7a8e281c7ddd2035a4341d12a59",
+            "cover": "assets/cover_1781437771486_kalahdariyangtiada.jpg",
+            "genre": "POP",
+            "badgeClass": "badge-lofi",
+            "category": "Single",
+            "releaseDate": "2026-05-23",
+            "songs": [],
+            "spotify": "",
+            "youtube": "",
+            "apple": "",
+            "theme": {
+                "accent1": "#8a2be2",
+                "accent2": "#ff007f",
+                "glow1": "rgba(138, 43, 226, 0.15)",
+                "glow2": "rgba(255, 0, 127, 0.15)"
+            }
         }
     ],
     "posts": [
