@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to NRUL Resonance | Aura Journal</title>
+    <meta name="description" content="Welcome to our new space. Read about how we curating instrumental sounds to improve mental focus.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (relative to post in posts/ subfolder) -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- No-Flash Theme Script -->
+    <script>
+        (function() {
+            const savedMode = localStorage.getItem('themeMode');
+            const defaultMode = 'light';
+            const activeMode = savedMode || defaultMode || 'dark';
+            if (activeMode === 'light') {
+                document.documentElement.classList.add('light-mode');
+            } else {
+                document.documentElement.classList.remove('light-mode');
+            }
+        })();
+    </script>
+</head>
+<body class="zenith-theme">
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow" id="glow-1"></div>
+    <div class="ambient-glow" id="glow-2"></div>
+    
+    <!-- Header -->
+    <div class="header-sticky-wrapper">
+    <header class="header">
+        <a href="/index.html" class="logo" style="text-decoration: none;">
+            <span class="logo-dot"></span>
+            <span class="logo-text">NRUL</span>
+        </a>
+        <nav class="nav">
+            
+                <a href="/index.html" class="nav-link">Releases</a>
+                <a href="/blog.html" class="nav-link active-nav">Journal</a>
+            
+        </nav>
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <button class="theme-toggle" id="btn-theme-toggle" aria-label="Toggle Dark/Light Mode">
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </button>
+            <div class="header-socials">
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="header-social-link dsp-youtube" title="YouTube">
+                    <svg viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://open.spotify.com" target="_blank" rel="noopener" class="header-social-link dsp-spotify" title="Spotify">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.377-1.454-5.37-1.783-8.892-1.007-.336.074-.67-.142-.744-.48-.074-.336.143-.67.48-.744 3.844-.88 7.143-.51 9.806 1.12.294.18.387.563.207.857zm1.225-2.72c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.08-1.182-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.66-1.11 8.224-.563 11.35 1.36.366.226.486.707.26 1.074zm.106-2.833C14.992 8.98 9.333 8.794 6.05 9.79c-.506.153-1.04-.137-1.193-.646-.152-.507.137-1.04.646-1.193 3.76-1.143 10.007-.93 13.43 1.103.456.27.604.862.333 1.32-.27.455-.86.604-1.32.332z"/></svg>
+                </a>
+                <a href="https://music.apple.com" target="_blank" rel="noopener" class="header-social-link dsp-apple" title="Apple Music">
+                    <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.063c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <article class="post-container glass-card">
+            <a href="/blog.html" class="back-nav">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Journal
+            </a>
+            
+            <div class="post-header">
+                <div class="post-meta">
+                    <span class="post-date">2026-06-14</span>
+                    <span class="meta-dot">&bull;</span>
+                    <span class="post-author">By Aura Team</span>
+                </div>
+                <h1 class="post-title">Introduction to NRUL Resonance</h1>
+            </div>
+            
+            <div class="post-cover-wrap">
+                <img src="/assets/lofi_chill.png" alt="Introduction to NRUL Resonance" class="post-cover-img">
+            </div>
+            
+            <div class="post-content">
+                <h2>The Philosophy Behind NRUL</h2><p>In a world filled with endless notifications and digital noise, finding focus is harder than ever. NRUL Resonance was born out of a simple need: to create <strong>sonic sanctuaries</strong> where minds can wander, create, or relax without distraction.</p><p>We specialize in four core sonic styles:</p><ul><li><strong>Lo-Fi:</strong> Chilled-out beats featuring electric piano keys and organic vinyl crackle.</li><li><strong>Synthwave:</strong> Energetic synthesizers echoing retro neon highways.</li><li><strong>Ambient:</strong> Cosmic, spacious synthetic pads representing deep nebula fields.</li><li><strong>Acoustic:</strong> Simple fingerstyle wood-guitars matching forest trails.</li></ul><p>We invite you to launch the player, select your vibe, and let the ambient aura guide your focus.</p>
+            </div>
+        </article>
+    </main>
+
+    
+                <footer class="footer gallery-footer" style="padding: 40px 24px 20px; border-top: 1px solid var(--glass-border); background: var(--bg-darker); margin-top: 60px;">
+                    <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; max-width: var(--container-width); margin: 0 auto; flex-wrap: wrap; gap: 16px;">
+                        <p style="color: var(--color-text-muted); font-size: 0.85rem; margin: 0;">© 2026 NRUL. All Rights Reserved.</p>
+                        <p class="footer-desc" style="color: var(--color-text-muted); font-size: 0.85rem; margin: 0;">Crafting ambient digital environments for calm and inspiration.</p>
+                    </div>
+                </footer>
+            
+
+    <!-- Lightbox Player Overlay -->
+    <div id="player-lightbox" class="lightbox-backdrop">
+        <div class="lightbox-content glass-card player-container">
+            <!-- Visualizer Canvas -->
+            <canvas id="visualizer" class="player-visualizer"></canvas>
+            
+            <button class="lightbox-close" id="btn-close-lightbox" aria-label="Close Player">&times;</button>
+            
+            <div class="player-inner">
+                <!-- Album Cover Display -->
+                <div class="album-art-wrap">
+                    <img id="player-cover" src="/assets/lofi_chill.png" alt="Aura Resonance Cover" class="player-cover">
+                    <div class="play-state-indicator">
+                        <span class="pulse-ring"></span>
+                    </div>
+                </div>
+                
+                <!-- Track Information -->
+                <div class="track-info">
+                    <h3 id="player-title" class="player-title">Silent Whispers</h3>
+                    <p id="player-artist" class="player-artist">Lofi & Chillout Vibe</p>
+                    <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                        <div id="player-genre-badge" class="genre-badge badge-lofi">LO-FI</div>
+                        <div id="player-category-badge" class="genre-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--color-text-main); border: 1px solid var(--glass-border);">EP</div>
+                    </div>
+                    
+                    <!-- Song List for EP/Album -->
+                    <div class="player-song-list" id="player-song-list" style="display: none;">
+                        
+                    <div class="song-item song-item-active" data-song-idx="0" style="cursor:pointer;">
+                        <span><span class="song-item-number">01</span><span class="song-item-title">Silent Whispers</span></span>
+                        <span class="song-item-artist">Lofi Chill</span>
+                    </div>
+                    <div class="song-item" data-song-idx="1" style="cursor:pointer;">
+                        <span><span class="song-item-number">02</span><span class="song-item-title">Coffee Morning</span></span>
+                        <span class="song-item-artist">Lofi Chill</span>
+                    </div>
+                    <div class="song-item" data-song-idx="2" style="cursor:pointer;">
+                        <span><span class="song-item-number">03</span><span class="song-item-title">Dreamy Keys</span></span>
+                        <span class="song-item-artist">Lofi Chill</span>
+                    </div>
+                    </div>
+                    
+                    <!-- Dynamic Streaming DSP Links -->
+                    <div class="dsp-links" id="player-dsp-links"></div>
+                </div>
+                
+                <!-- Playback Controls -->
+                <div class="player-controls">
+                    <!-- Progress Slider -->
+                    <div class="progress-container">
+                        <span id="time-current" class="time-display">0:00</span>
+                        <div class="progress-bar-wrap" id="progress-bar-wrap">
+                            <div class="progress-bar-bg"></div>
+                            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                            <div class="progress-handle" id="progress-handle"></div>
+                        </div>
+                        <span id="time-duration" class="time-display">0:00</span>
+                    </div>
+                    
+                    <!-- Control Buttons -->
+                    <div class="btn-group">
+                        <button id="btn-shuffle" class="btn-ctrl" aria-label="Shuffle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+                        </button>
+                        <button id="btn-prev" class="btn-ctrl" aria-label="Previous Track">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                        </button>
+                        <button id="btn-play-pause" class="btn-ctrl btn-play" aria-label="Play/Pause">
+                            <svg id="play-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            <svg id="pause-icon" class="hidden" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                        </button>
+                        <button id="btn-next" class="btn-ctrl" aria-label="Next Track">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                        </button>
+                        <button id="btn-repeat" class="btn-ctrl" aria-label="Repeat">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Volume Control -->
+                    <div class="volume-container">
+                        <button id="btn-mute" class="btn-volume" aria-label="Mute/Unmute">
+                            <svg id="volume-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        </button>
+                        <div class="volume-slider-wrap" id="volume-slider-wrap">
+                            <div class="volume-bar-bg"></div>
+                            <div class="volume-bar-fill" id="volume-bar-fill"></div>
+                            <div class="volume-handle" id="volume-handle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Now Playing Indicator -->
+    <div id="floating-player-indicator" class="floating-indicator hidden">
+        <div class="music-wave-bars">
+            <span class="music-wave-bar bar-1"></span>
+            <span class="music-wave-bar bar-2"></span>
+            <span class="music-wave-bar bar-3"></span>
+        </div>
+        <span class="floating-text" id="floating-track-info">Now Playing</span>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="/app.js"></script>
+</body>
+</html>

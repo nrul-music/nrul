@@ -1,0 +1,160 @@
+{
+    "selectedTheme": "zenith",
+    "defaultThemeMode": "light",
+    "branding": {
+        "logoText": "NRUL",
+        "spotifyLink": "https://open.spotify.com",
+        "youtubeLink": "https://youtube.com",
+        "appleLink": "https://music.apple.com"
+    },
+    "hero": {
+        "tagline": "Introducing NRUL Soundscapes",
+        "titlePart1": "Soundscapes",
+        "titleGradient": "for the Mind",
+        "description": "A premium curation of instrumental vibes. From deep space ambient waves to chilled lofi beats. Crafted for creators, thinkers, and deep-focus seekers.",
+        "ctaPrimaryText": "Start Listening",
+        "ctaPrimaryLink": "#player-section",
+        "ctaSecondaryText": "Explore Tracklist",
+        "ctaSecondaryLink": "#tracklist"
+    },
+    "about": {
+        "subtitle": "Why NRUL Resonance?",
+        "title": "Designed for Immersion",
+        "features": [
+            {
+                "icon": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z\"></path><path d=\"M19 10v1a7 7 0 0 1-14 0v-1\"></path><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"22\"></line></svg>",
+                "title": "Ethereal Sound Quality",
+                "description": "Each track is carefully engineered and balanced to stimulate focus areas in the brain while providing a relaxing audio bed."
+            },
+            {
+                "icon": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"></path><path d=\"M2 12h20\"></path></svg>",
+                "title": "Dynamic Ambient Aura",
+                "description": "The entire landing page shifts colors to match the dynamic signature profile of the current song, creating a visual ecosystem."
+            },
+            {
+                "icon": "<svg width=\"32\" height=\"32\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>",
+                "title": "Zero Friction Playback",
+                "description": "No account required, no heavy downloads, no ads. Built on lightweight static architectures for maximum speed."
+            }
+        ]
+    },
+    "subscribe": {
+        "title": "Join the Resonance",
+        "description": "Get notified when we release new volumes, ambient packs, and exclusive high-fidelity downloads."
+    },
+    "footer": {
+        "description": "Crafting ambient digital environments for calm and inspiration.",
+        "copyright": "© 2026 NRUL. All Rights Reserved."
+    },
+    "tracks": [
+        {
+            "title": "Silent Whispers",
+            "artist": "Lofi & Chillout Vibe",
+            "url": "assets/silent_whispers.mp3",
+            "cover": "assets/lofi_chill.png",
+            "genre": "LO-FI",
+            "badgeClass": "badge-lofi",
+            "category": "EP",
+            "songs": [
+                { "title": "Silent Whispers", "artist": "Lofi Chill", "url": "assets/silent_whispers.mp3" },
+                { "title": "Coffee Morning", "artist": "Lofi Chill", "url": "" },
+                { "title": "Dreamy Keys", "artist": "Lofi Chill", "url": "" }
+            ],
+            "spotify": "https://open.spotify.com",
+            "youtube": "https://youtube.com",
+            "apple": "https://music.apple.com",
+            "theme": {
+                "accent1": "#00f0ff",
+                "accent2": "#7000ff",
+                "glow1": "rgba(0, 240, 255, 0.15)",
+                "glow2": "rgba(112, 0, 255, 0.15)"
+            }
+        },
+        {
+            "title": "Neon Pulse",
+            "artist": "Synthwave / Retrowave Drive",
+            "url": "assets/neon_pulse.mp3",
+            "cover": "assets/neon_sunset.png",
+            "genre": "SYNTHWAVE",
+            "badgeClass": "badge-synth",
+            "category": "Single",
+            "songs": [
+                { "title": "Neon Pulse", "artist": "Synthwave", "url": "assets/neon_pulse.mp3" }
+            ],
+            "spotify": "https://open.spotify.com",
+            "youtube": "https://youtube.com",
+            "apple": "https://music.apple.com",
+            "theme": {
+                "accent1": "#ff007f",
+                "accent2": "#00f0ff",
+                "glow1": "rgba(255, 0, 127, 0.15)",
+                "glow2": "rgba(0, 240, 255, 0.15)"
+            }
+        },
+        {
+            "title": "Ethereal Drift",
+            "artist": "Cosmic Ambient & Pads",
+            "url": "assets/ethereal_drift.mp3",
+            "cover": "assets/cosmic_ambient.png",
+            "genre": "AMBIENT",
+            "badgeClass": "badge-ambient",
+            "category": "Album",
+            "songs": [
+                { "title": "Starship Voyage", "artist": "Cosmic Ambient", "url": "assets/ethereal_drift.mp3" },
+                { "title": "Nebulae Nebula", "artist": "Cosmic Ambient", "url": "" },
+                { "title": "Ethereal Drift", "artist": "Cosmic Ambient", "url": "" },
+                { "title": "Space Wind", "artist": "Cosmic Ambient", "url": "" }
+            ],
+            "spotify": "https://open.spotify.com",
+            "youtube": "https://youtube.com",
+            "apple": "https://music.apple.com",
+            "theme": {
+                "accent1": "#00f0ff",
+                "accent2": "#7000ff",
+                "glow1": "rgba(0, 240, 255, 0.15)",
+                "glow2": "rgba(112, 0, 255, 0.15)"
+            }
+        },
+        {
+            "title": "Acoustic Path",
+            "artist": "Warm Instrumental Folk Guitar",
+            "url": "assets/acoustic_path.mp3",
+            "cover": "assets/acoustic_dreams.png",
+            "genre": "ACOUSTIC",
+            "badgeClass": "badge-acoustic",
+            "category": "EP",
+            "songs": [
+                { "title": "Acoustic Path", "artist": "Folk Guitar", "url": "assets/acoustic_path.mp3" },
+                { "title": "River Flow", "artist": "Folk Guitar", "url": "" },
+                { "title": "Forest Trail", "artist": "Folk Guitar", "url": "" }
+            ],
+            "spotify": "https://open.spotify.com",
+            "youtube": "https://youtube.com",
+            "apple": "https://music.apple.com",
+            "theme": {
+                "accent1": "#ffaa00",
+                "accent2": "#22c55e",
+                "glow1": "rgba(255, 170, 0, 0.15)",
+                "glow2": "rgba(34, 197, 94, 0.15)"
+            }
+        }
+    ],
+    "posts": [
+        {
+            "id": "intro-aura-resonance",
+            "title": "Introduction to NRUL Resonance",
+            "date": "2026-06-14",
+            "excerpt": "Welcome to our new space. Read about how we curating instrumental sounds to improve mental focus.",
+            "content": "<h2>The Philosophy Behind NRUL</h2><p>In a world filled with endless notifications and digital noise, finding focus is harder than ever. NRUL Resonance was born out of a simple need: to create <strong>sonic sanctuaries</strong> where minds can wander, create, or relax without distraction.</p><p>We specialize in four core sonic styles:</p><ul><li><strong>Lo-Fi:</strong> Chilled-out beats featuring electric piano keys and organic vinyl crackle.</li><li><strong>Synthwave:</strong> Energetic synthesizers echoing retro neon highways.</li><li><strong>Ambient:</strong> Cosmic, spacious synthetic pads representing deep nebula fields.</li><li><strong>Acoustic:</strong> Simple fingerstyle wood-guitars matching forest trails.</li></ul><p>We invite you to launch the player, select your vibe, and let the ambient aura guide your focus.</p>",
+            "cover": "assets/lofi_chill.png"
+        },
+        {
+            "id": "science-of-focus-music",
+            "title": "The Science of Focus Music",
+            "date": "2026-06-10",
+            "excerpt": "Why does instrumental music boost productivity? Exploring the neurology of soundscapes.",
+            "content": "<h2>How Sound Shapes Cognitive Flow</h2><p>Why do certain types of music help us study or code while others distract us? The answer lies in how our brain processes audial frequencies.</p><p>When you listen to lyric-heavy music, your language-processing centers (primarily Broca's and Wernicke's areas) actively try to decode the words. This competes with your logical reading and writing focus. Instrumental soundscapes bypass this linguistic layer completely, allowing your working memory to remain focused on the task at hand.</p><p>Furthermore, ambient tracks maintain a steady sound volume and avoid sudden transitions. This prevents the amygdala from getting startled, lowering stress levels and keeping you in a state of flow for hours.</p>",
+            "cover": "assets/cosmic_ambient.png"
+        }
+    ]
+}
