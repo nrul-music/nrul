@@ -497,6 +497,7 @@ html.light-mode .header-sticky-wrapper {
     position: relative;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-radius var(--transition-smooth), border var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .player-cover {
@@ -506,9 +507,38 @@ html.light-mode .header-sticky-wrapper {
     transition: transform 12s linear;
 }
 
-/* Rotating Album Art when Playing */
-.playing .player-cover {
+/* Rotating Album Art when Playing - Vinyl Disc Effect */
+.playing .album-art-wrap {
+    border-radius: 50% !important;
     animation: rotateArt 16s infinite linear;
+    border: 6px solid #12111a !important; /* dark vinyl outer rim */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 0 10px rgba(255, 255, 255, 0.03);
+}
+
+/* Vinyl center hole */
+.album-art-wrap::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #07060f; /* Match dark theme bg */
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    z-index: 10;
+}
+
+.playing .album-art-wrap::after {
+    opacity: 1;
+}
+
+html.light-mode .album-art-wrap::after {
+    background: #f7f6fa; /* Match light theme bg */
 }
 
 @keyframes rotateArt {
@@ -763,7 +793,8 @@ html.light-mode .header-sticky-wrapper {
 
 .track-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
     gap: 24px;
     margin-top: 48px;
 }
@@ -1450,11 +1481,11 @@ html.light-mode .song-item:hover {
     padding: 0 24px;
 }
 
-/* Borderless Masonry-style Grid */
 .zenith-theme .gallery-grid {
     margin-top: 0 !important;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    justify-content: center;
     gap: 16px;
     width: 100%;
 }
@@ -1644,11 +1675,69 @@ html.light-mode .song-item:hover {
     100% { height: 16px; }
 }
 
+.floating-cover-preview {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.playing #floating-player-indicator .floating-cover-preview {
+    animation: rotateArt 12s infinite linear;
+}
+
+.floating-info-wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+    overflow: hidden;
+    text-align: left;
+}
+
 .floating-text {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
+    color: var(--color-text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.floating-controls {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0 6px;
+    margin: 0 4px;
+}
+
+.floating-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.floating-btn svg {
+    display: block;
+    stroke: currentColor;
+    fill: none;
+}
+
+.floating-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
     color: var(--color-text-main);
 }
 

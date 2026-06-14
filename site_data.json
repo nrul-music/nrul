@@ -61,6 +61,7 @@
             "genre": "LO-FI",
             "badgeClass": "badge-lofi",
             "category": "EP",
+            "releaseDate": "2026-06-14",
             "songs": [
                 {
                     "title": "Silent Whispers",
@@ -96,6 +97,7 @@
             "genre": "SYNTHWAVE",
             "badgeClass": "badge-synth",
             "category": "Single",
+            "releaseDate": "2026-06-08",
             "songs": [
                 {
                     "title": "Neon Pulse",
@@ -121,6 +123,7 @@
             "genre": "AMBIENT",
             "badgeClass": "badge-ambient",
             "category": "Album",
+            "releaseDate": "2026-05-20",
             "songs": [
                 {
                     "title": "Starship Voyage",
@@ -161,6 +164,7 @@
             "genre": "ACOUSTIC",
             "badgeClass": "badge-acoustic",
             "category": "EP",
+            "releaseDate": "2026-04-12",
             "songs": [
                 {
                     "title": "Acoustic Path",

@@ -174,6 +174,10 @@ function loadTrack(index) {
     if (floatingTrackInfo) {
         floatingTrackInfo.textContent = `Now Playing: ${track.title} - ${track.artist}`;
     }
+    const floatingCover = document.getElementById("floating-cover-preview");
+    if (floatingCover) {
+        floatingCover.src = getAbsolutePath(track.cover);
+    }
     
     // Update Song List
     if (playerSongList) {
@@ -275,6 +279,10 @@ function playListSong(songIdx) {
     const floatingTrackInfo = document.getElementById("floating-track-info");
     if (floatingTrackInfo) {
         floatingTrackInfo.textContent = `Now Playing: ${song.title} - ${song.artist}`;
+    }
+    const floatingCover = document.getElementById("floating-cover-preview");
+    if (floatingCover) {
+        floatingCover.src = getAbsolutePath(track.cover);
     }
     
     // Switch audio source: use song's own URL if available, else fallback to track URL
@@ -504,12 +512,16 @@ function onAudioEnded() {
 }
 
 function onAudioPause() {
-    const floatingIndicator = document.getElementById("floating-player-indicator");
-    if (floatingIndicator) floatingIndicator.classList.remove("show");
-    
+    document.body.classList.remove("playing");
     if (playerContainer) playerContainer.classList.remove("playing");
     if (playIcon) playIcon.classList.remove("hidden");
     if (pauseIcon) pauseIcon.classList.add("hidden");
+    
+    // Sync floating controls play/pause icon
+    const floatPlay = document.getElementById("floating-play-icon");
+    const floatPause = document.getElementById("floating-pause-icon");
+    if (floatPlay) floatPlay.classList.remove("hidden");
+    if (floatPause) floatPause.classList.add("hidden");
 }
 
 function onAudioPlay() {
@@ -519,9 +531,16 @@ function onAudioPlay() {
         floatingIndicator.classList.add("show");
     }
     
+    document.body.classList.add("playing");
     if (playerContainer) playerContainer.classList.add("playing");
     if (playIcon) playIcon.classList.add("hidden");
     if (pauseIcon) pauseIcon.classList.remove("hidden");
+    
+    // Sync floating controls play/pause icon
+    const floatPlay = document.getElementById("floating-play-icon");
+    const floatPause = document.getElementById("floating-pause-icon");
+    if (floatPlay) floatPlay.classList.add("hidden");
+    if (floatPause) floatPause.classList.remove("hidden");
 }
 
 // --- Event Delegation on document.body (click listeners are persistent) ---
@@ -584,6 +603,21 @@ function setupEventDelegation() {
         // 8. Floating Player Indicator click
         const floatingIndicatorClick = e.target.closest("#floating-player-indicator");
         if (floatingIndicatorClick) {
+            // First check if click was on one of the floating buttons
+            const floatBtn = e.target.closest(".floating-btn");
+            if (floatBtn) {
+                e.stopPropagation();
+                e.preventDefault();
+                if (floatBtn.id === 'btn-floating-prev') {
+                    prevTrack();
+                } else if (floatBtn.id === 'btn-floating-play-pause') {
+                    togglePlay();
+                } else if (floatBtn.id === 'btn-floating-next') {
+                    nextTrack();
+                }
+                return;
+            }
+            
             const playerLightbox = document.getElementById("player-lightbox");
             const hasEmbeddedPlayer = document.getElementById("player-section");
             if (document.body.classList.contains("zenith-theme") || !hasEmbeddedPlayer) {
@@ -837,10 +871,17 @@ function rebindPageScripts() {
     }
     
     // Sync Play/Pause UI icons
+    const floatPlay = document.getElementById("floating-play-icon");
+    const floatPause = document.getElementById("floating-pause-icon");
     if (isPlaying && !audio.paused) {
+        document.body.classList.add("playing");
         if (playerContainer) playerContainer.classList.add("playing");
         if (playIcon) playIcon.classList.add("hidden");
         if (pauseIcon) pauseIcon.classList.remove("hidden");
+        
+        if (floatPlay) floatPlay.classList.add("hidden");
+        if (floatPause) floatPause.classList.remove("hidden");
+        
         // Show floating bar if music is playing on non-embedded-player pages
         const floatingIndicator = document.getElementById("floating-player-indicator");
         const lightbox = document.getElementById("player-lightbox");
@@ -848,11 +889,20 @@ function rebindPageScripts() {
             floatingIndicator.classList.add("show");
         }
     } else {
+        document.body.classList.remove("playing");
         if (playerContainer) playerContainer.classList.remove("playing");
         if (playIcon) playIcon.classList.remove("hidden");
         if (pauseIcon) pauseIcon.classList.add("hidden");
+        
+        if (floatPlay) floatPlay.classList.remove("hidden");
+        if (floatPause) floatPause.classList.add("hidden");
+        
+        // Let it stay visible if an audio track is already loaded/active
         const floatingIndicator = document.getElementById("floating-player-indicator");
-        if (floatingIndicator) floatingIndicator.classList.remove("show");
+        const lightbox = document.getElementById("player-lightbox");
+        if (audio.src && floatingIndicator && (!lightbox || !lightbox.classList.contains("active"))) {
+            floatingIndicator.classList.add("show");
+        }
     }
     
     // Sync repeat/shuffle highlight classes
