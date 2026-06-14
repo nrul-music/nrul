@@ -185,8 +185,18 @@
                 <p class="section-desc max-width-center">Click on any track below to load it into the main Aura Widget player above and experience its unique theme & visualizer signature.</p>
             </div>
             
-            <div class="track-grid">
+            <div class="track-grid layout-{{releasesLayout}}">
                 <!-- TRACK_CARDS_PLACEHOLDER -->
+            </div>
+            
+            <div class="slider-controls-wrapper layout-{{releasesLayout}}-controls">
+                <button class="slider-control-btn btn-prev-slide" aria-label="Previous Release">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <div class="slider-dots-container"></div>
+                <button class="slider-control-btn btn-next-slide" aria-label="Next Release">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
             </div>
         </section>
 

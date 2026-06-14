@@ -8,6 +8,8 @@ let isShuffle = false;
 let isRepeat = false;
 let isMuted = false;
 let currentVolume = 0.8;
+let hasStartedPlaying = false;
+let currentSlideIndex = 0;
 
 // --- DOM Elements ---
 const audio = new Audio();
@@ -152,6 +154,8 @@ function loadTrack(index) {
     
     const track = tracks[index];
     currentIndex = index;
+    currentSlideIndex = index;
+    updateSlides();
     
     // Update Audio Element
     audio.src = getAbsolutePath(track.url);
@@ -256,6 +260,7 @@ function loadTrack(index) {
 
 // --- Play a specific song from the current release's song list ---
 function playListSong(songIdx) {
+    hasStartedPlaying = true;
     const tracks = getTracks();
     if (!tracks || tracks.length === 0) return;
     const track = tracks[currentIndex];
@@ -317,6 +322,7 @@ function playListSong(songIdx) {
 
 // --- Audio Controls Actions ---
 function playTrack() {
+    hasStartedPlaying = true;
     // Initialize AudioContext on first user interaction
     if (!isAudioCtxInitialized) {
         initAudioContext();
@@ -350,9 +356,6 @@ function pauseTrack() {
     if (playIcon) playIcon.classList.remove("hidden");
     if (pauseIcon) pauseIcon.classList.add("hidden");
     
-    const floatingIndicator = document.getElementById("floating-player-indicator");
-    if (floatingIndicator) floatingIndicator.classList.remove("show");
-    
     audio.pause();
 }
 
@@ -368,32 +371,61 @@ function prevTrack() {
     const tracks = getTracks();
     if (tracks.length === 0) return;
     
+    const track = tracks[currentIndex];
+    if (track.songs && Array.isArray(track.songs) && track.songs.length > 0) {
+        if (currentSongIndex > 0) {
+            playListSong(currentSongIndex - 1);
+            return;
+        }
+    }
+    
     let newIndex = currentIndex - 1;
     if (newIndex < 0) {
         newIndex = tracks.length - 1;
     }
     loadTrack(newIndex);
-    if (isPlaying) playTrack();
+    
+    // Auto-play the last song of the new album if it's an album
+    const newTrack = tracks[newIndex];
+    if (newTrack.songs && Array.isArray(newTrack.songs) && newTrack.songs.length > 0) {
+        playListSong(newTrack.songs.length - 1);
+    } else {
+        if (isPlaying) playTrack();
+    }
 }
 
 function nextTrack() {
     const tracks = getTracks();
     if (tracks.length === 0) return;
     
+    const track = tracks[currentIndex];
+    if (track.songs && Array.isArray(track.songs) && track.songs.length > 0) {
+        if (currentSongIndex < track.songs.length - 1) {
+            playListSong(currentSongIndex + 1);
+            return;
+        }
+    }
+    
+    let newIndex;
     if (isShuffle) {
-        let newIndex;
         do {
             newIndex = Math.floor(Math.random() * tracks.length);
         } while (newIndex === currentIndex && tracks.length > 1);
-        loadTrack(newIndex);
     } else {
-        let newIndex = currentIndex + 1;
+        newIndex = currentIndex + 1;
         if (newIndex >= tracks.length) {
             newIndex = 0;
         }
-        loadTrack(newIndex);
     }
-    if (isPlaying) playTrack();
+    loadTrack(newIndex);
+    
+    // Auto-play the first song of the new album if it's an album
+    const newTrack = tracks[newIndex];
+    if (newTrack.songs && Array.isArray(newTrack.songs) && newTrack.songs.length > 0) {
+        playListSong(0);
+    } else {
+        if (isPlaying) playTrack();
+    }
 }
 
 function toggleShuffle() {
@@ -525,9 +557,10 @@ function onAudioPause() {
 }
 
 function onAudioPlay() {
+    hasStartedPlaying = true;
     const floatingIndicator = document.getElementById("floating-player-indicator");
     const playerLightbox = document.getElementById("player-lightbox");
-    if (floatingIndicator && (!playerLightbox || !playerLightbox.classList.contains("active"))) {
+    if (hasStartedPlaying && floatingIndicator && (!playerLightbox || !playerLightbox.classList.contains("active"))) {
         floatingIndicator.classList.add("show");
     }
     
@@ -843,8 +876,16 @@ function rebindPageScripts() {
     const tracks = getTracks();
     if (tracks.length > 0 && currentIndex < tracks.length) {
         const track = tracks[currentIndex];
-        if (playerTitle) playerTitle.textContent = track.title;
-        if (playerArtist) playerArtist.textContent = track.artist;
+        let activeTitle = track.title;
+        let activeArtist = track.artist;
+        
+        if (track.songs && Array.isArray(track.songs) && track.songs[currentSongIndex]) {
+            activeTitle = track.songs[currentSongIndex].title;
+            activeArtist = track.songs[currentSongIndex].artist;
+        }
+        
+        if (playerTitle) playerTitle.textContent = activeTitle;
+        if (playerArtist) playerArtist.textContent = activeArtist;
         if (playerCover) playerCover.src = getAbsolutePath(track.cover);
         if (playerGenreBadge) {
             playerGenreBadge.textContent = track.genre;
@@ -852,6 +893,27 @@ function rebindPageScripts() {
         }
         if (playerCategoryBadge) {
             playerCategoryBadge.textContent = track.category || "Single";
+        }
+        
+        // Re-populate the song list items in player if it exists
+        if (playerSongList) {
+            playerSongList.innerHTML = "";
+            if (track.songs && Array.isArray(track.songs) && track.songs.length > 0) {
+                track.songs.forEach((song, idx) => {
+                    const songItem = document.createElement("div");
+                    songItem.className = "song-item" + (idx === currentSongIndex ? " song-item-active" : "");
+                    songItem.setAttribute("data-song-idx", idx);
+                    songItem.style.cursor = "pointer";
+                    songItem.innerHTML = `
+                        <span><span class="song-item-number">${String(idx + 1).padStart(2, '0')}</span><span class="song-item-title">${song.title}</span></span>
+                        <span class="song-item-artist">${song.artist}</span>
+                    `;
+                    playerSongList.appendChild(songItem);
+                });
+                playerSongList.style.display = "block";
+            } else {
+                playerSongList.style.display = "none";
+            }
         }
         
         // Sync active highlight class in track card listings on current page
@@ -866,7 +928,11 @@ function rebindPageScripts() {
         // Sync Floating Now Playing bar track details
         const floatingTrackInfo = document.getElementById("floating-track-info");
         if (floatingTrackInfo) {
-            floatingTrackInfo.textContent = `Now Playing: ${track.title} - ${track.artist}`;
+            floatingTrackInfo.textContent = `Now Playing: ${activeTitle} - ${activeArtist}`;
+        }
+        const floatingCover = document.getElementById("floating-cover-preview");
+        if (floatingCover) {
+            floatingCover.src = getAbsolutePath(track.cover);
         }
     }
     
@@ -885,7 +951,7 @@ function rebindPageScripts() {
         // Show floating bar if music is playing on non-embedded-player pages
         const floatingIndicator = document.getElementById("floating-player-indicator");
         const lightbox = document.getElementById("player-lightbox");
-        if (floatingIndicator && (!lightbox || !lightbox.classList.contains("active"))) {
+        if (hasStartedPlaying && floatingIndicator && (!lightbox || !lightbox.classList.contains("active"))) {
             floatingIndicator.classList.add("show");
         }
     } else {
@@ -897,10 +963,10 @@ function rebindPageScripts() {
         if (floatPlay) floatPlay.classList.remove("hidden");
         if (floatPause) floatPause.classList.add("hidden");
         
-        // Let it stay visible if an audio track is already loaded/active
+        // Let it stay visible if music has started playing
         const floatingIndicator = document.getElementById("floating-player-indicator");
         const lightbox = document.getElementById("player-lightbox");
-        if (audio.src && floatingIndicator && (!lightbox || !lightbox.classList.contains("active"))) {
+        if (hasStartedPlaying && floatingIndicator && (!lightbox || !lightbox.classList.contains("active"))) {
             floatingIndicator.classList.add("show");
         }
     }
@@ -916,6 +982,9 @@ function rebindPageScripts() {
     
     // Rebind sliders and forms
     bindSlidersAndControls();
+    
+    // Initialize slider layout logic if present
+    initSliderLayout();
     
     // Trigger scroll reveals
     setupScrollReveal();
@@ -1102,6 +1171,97 @@ function drawSineWave(width, height, offset, amp, color, freq, yBase) {
         }
     }
     canvasCtx.stroke();
+}
+
+// --- Slider Showcase Layout Engine ---
+function initSliderLayout() {
+    const trackGrid = document.querySelector(".track-grid");
+    if (!trackGrid || !trackGrid.classList.contains("layout-slider")) return;
+    
+    const cards = trackGrid.querySelectorAll(".track-card");
+    if (cards.length === 0) return;
+    
+    // Create dots in dots container
+    const dotsContainer = document.querySelector(".slider-dots-container");
+    if (dotsContainer) {
+        dotsContainer.innerHTML = "";
+        cards.forEach((_, idx) => {
+            const dot = document.createElement("div");
+            dot.className = "slider-dot" + (idx === currentSlideIndex ? " active-dot" : "");
+            dot.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                goToSlide(idx);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    }
+    
+    // Ensure active slides classes are synchronized
+    updateSlides();
+    
+    // Bind controls
+    const prevBtn = document.querySelector(".btn-prev-slide");
+    const nextBtn = document.querySelector(".btn-next-slide");
+    
+    if (prevBtn) {
+        prevBtn.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            let prevIdx = currentSlideIndex - 1;
+            if (prevIdx < 0) prevIdx = cards.length - 1;
+            goToSlide(prevIdx, 'left');
+        };
+    }
+    
+    if (nextBtn) {
+        nextBtn.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            let nextIdx = currentSlideIndex + 1;
+            if (nextIdx >= cards.length) nextIdx = 0;
+            goToSlide(nextIdx, 'right');
+        };
+    }
+}
+
+function goToSlide(index, direction) {
+    const trackGrid = document.querySelector(".track-grid");
+    if (!trackGrid) return;
+    const cards = trackGrid.querySelectorAll(".track-card");
+    if (cards.length === 0) return;
+    
+    currentSlideIndex = index;
+    
+    updateSlides();
+}
+
+function updateSlides() {
+    const trackGrid = document.querySelector(".track-grid");
+    if (!trackGrid) return;
+    const cards = trackGrid.querySelectorAll(".track-card");
+    if (cards.length === 0) return;
+    
+    // Bound check
+    if (currentSlideIndex >= cards.length) currentSlideIndex = 0;
+    if (currentSlideIndex < 0) currentSlideIndex = cards.length - 1;
+    
+    cards.forEach((card, idx) => {
+        card.classList.remove("active-slide", "slide-left", "slide-right");
+        if (idx === currentSlideIndex) {
+            card.classList.add("active-slide");
+        } else if (idx < currentSlideIndex) {
+            card.classList.add("slide-left");
+        } else {
+            card.classList.add("slide-right");
+        }
+    });
+    
+    // Sync dots highlight
+    const dots = document.querySelectorAll(".slider-dot");
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle("active-dot", idx === currentSlideIndex);
+    });
 }
 
 // --- Scroll Reveal Animation ---
