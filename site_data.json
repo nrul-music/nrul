@@ -3,7 +3,7 @@
     "defaultThemeMode": "dark",
     "baseUrl": "",
     "homepageTitle": "NRUL | Just Another ",
-    "releasesLayout": "slider",
+    "releasesLayout": "full-grid",
     "branding": {
         "logoText": "NRUL",
         "spotifyLink": "https://open.spotify.com",
