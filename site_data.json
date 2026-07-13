@@ -6,19 +6,19 @@
     "releasesLayout": "slider",
     "branding": {
         "logoText": "NRUL",
-        "spotifyLink": "https://open.spotify.com",
-        "youtubeLink": "https://youtube.com",
-        "appleLink": "https://music.apple.com",
+        "spotifyLink": "https://open.spotify.com/intl-id/artist/2A5wADwZOFZSSOECDQprEX",
+        "youtubeLink": "https://www.youtube.com/@nrul-music",
+        "appleLink": "https://music.apple.com/us/artist/nrul/6782496907",
         "showSpotify": true,
-        "showYoutube": true,
-        "showApple": true,
+        "showYoutube": false,
+        "showApple": false,
         "xLink": "https://x.com",
         "showX": true,
         "facebookLink": "",
         "showFacebook": true,
-        "instagramLink": "",
+        "instagramLink": "https://www.instagram.com/nrul.music",
         "showInstagram": true,
-        "tiktokLink": "https://www.tiktok.com/@liberstaum",
+        "tiktokLink": "https://www.tiktok.com/@nrul.music",
         "showTiktok": true
     },
     "journal": {
@@ -61,7 +61,7 @@
         "description": "Get notified when we release new volumes, ambient packs, and exclusive high-fidelity downloads."
     },
     "footer": {
-        "description": "Crafting ambient digital environments for calm and inspiration.",
+        "description": "Celebes",
         "copyright": "© 2026 NRUL. All Rights Reserved."
     },
     "tracks": [
@@ -87,6 +87,107 @@
             "spotify": "https://open.spotify.com/album/0W6jOgUNWF7nbXW4MR6q8o",
             "youtube": "https://music.youtube.com/watch?v=en6iY7oEKAY",
             "apple": "",
+            "theme": {
+                "accent1": "#8a2be2",
+                "accent2": "#ff007f",
+                "glow1": "rgba(138, 43, 226, 0.15)",
+                "glow2": "rgba(255, 0, 127, 0.15)"
+            }
+        },
+        {
+            "title": "SIDE #01",
+            "artist": "NRUL",
+            "url": "assets/preview_1783920068262_ipm5f.mp3",
+            "cover": "assets/cover_1783920056092.jpg",
+            "genre": "POP",
+            "badgeClass": "badge-synth",
+            "category": "Album",
+            "releaseDate": "2026-07-12",
+            "songs": [
+                {
+                    "title": "Band-Aid",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920068262_ipm5f.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=s7LnpqetHZE",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "It's You",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920069281_zevye.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=MM0sckhUlN0",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Cloud",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920160790_nvrqm.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=pzM-ZQ3Y_hs",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "You Remember Me Wrong",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920108066_662j4.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=jHMszLpdjoo",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Linger",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920183230_qp52o.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=pIr4ddnCxMg",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Paper Sun",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920186637_ft8wr.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=9hSt-XJDcQM",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Hangin' Round",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920210041_c6jy6.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=uHruVYeAikI",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Cardboard Crown",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920217830_luy7g.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=hBWQRn7s-Q8",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "What Remains",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920125810_d9cis.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=jUJ5WqKSrtM",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                },
+                {
+                    "title": "Faultline",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1783920126079_o7jxn.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=fhx-0AovcOQ",
+                    "trimStart": "00:00",
+                    "trimEnd": "00:30"
+                }
+            ],
+            "spotify": "https://open.spotify.com/album/4iJMnwGffPoF559QEGidFE",
+            "youtube": "https://www.youtube.com/watch?v=s7LnpqetHZE&list=OLAK5uy_nA3Qu1vxn2mAAu-r7piTE-hkVEK480Z_o",
+            "apple": "https://music.apple.com/us/album/side-01/6789966679",
             "theme": {
                 "accent1": "#8a2be2",
                 "accent2": "#ff007f",
