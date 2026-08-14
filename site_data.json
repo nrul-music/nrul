@@ -194,6 +194,35 @@
                 "glow1": "rgba(138, 43, 226, 0.15)",
                 "glow2": "rgba(255, 0, 127, 0.15)"
             }
+        },
+        {
+            "title": "Pita yang Kusut",
+            "artist": "NRUL",
+            "url": "assets/preview_1786683156429_jvq8k.mp3",
+            "cover": "assets/cover_1786683018166.jpg",
+            "genre": "POP",
+            "badgeClass": "badge-synth",
+            "category": "Single",
+            "releaseDate": "2026-07-31",
+            "songs": [
+                {
+                    "title": "Pita yang Kusut",
+                    "artist": "NRUL",
+                    "url": "assets/preview_1786683156429_jvq8k.mp3",
+                    "sourceUrl": "https://www.youtube.com/watch?v=_IrPoO2zCD8",
+                    "trimStart": "00:40",
+                    "trimEnd": "01:28"
+                }
+            ],
+            "spotify": "https://open.spotify.com/track/5YYuOm9VbR0janokS4Sxti",
+            "youtube": "https://music.youtube.com/watch?v=_IrPoO2zCD8",
+            "apple": "",
+            "theme": {
+                "accent1": "#8a2be2",
+                "accent2": "#ff007f",
+                "glow1": "rgba(138, 43, 226, 0.15)",
+                "glow2": "rgba(255, 0, 127, 0.15)"
+            }
         }
     ],
     "posts": [],
